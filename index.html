@@ -12,11 +12,13 @@ body {
     padding: 0;
     color: #FFFFFF;
     scroll-behavior: smooth;
-    
-    /* Gradient + subtle pattern background */
-    background: linear-gradient(135deg, #1A1A1A, #2C2C2C);
-    background-image: radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
+
+    /* Corrected combined gradient + subtle pattern */
+    background: 
+        radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #1A1A1A, #2C2C2C);
+    background-size: 50px 50px, auto;
+    background-repeat: repeat, no-repeat;
 }
 
 /* --- Header --- */
