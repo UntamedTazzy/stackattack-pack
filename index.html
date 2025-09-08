@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StackAttack Pack</title>
   <style>
+    /* Base styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #123D12; /* Dark green */
+      background-color: #123D12; /* Dark green base */
+      background-image: url('images/poker-pattern.png'); /* subtle pattern overlay */
+      background-size: cover;
+      background-repeat: repeat;
       color: white;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
     header {
       text-align: center;
@@ -25,17 +30,39 @@
       margin-bottom: 10px;
     }
     h2 {
-      color: #FFA500; /* Orange */
+      color: #FFA500; /* Orange headers */
       margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+    h2:hover {
+      text-shadow: 0 0 8px #FFA500;
     }
     section {
       padding: 20px 40px;
       max-width: 900px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
     }
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.8s; }
+    section:nth-of-type(5) { animation-delay: 1s; }
+    section:nth-of-type(6) { animation-delay: 1.2s; }
     ul {
       list-style-type: square;
       padding-left: 20px;
+    }
+    a {
+      color: #FFA500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      text-shadow: 0 0 8px #FFA500;
+      color: #FFA500;
     }
     footer {
       text-align: center;
@@ -43,17 +70,19 @@
       border-top: 1px solid #FFA500;
       margin-top: 20px;
     }
-    a {
-      color: #FFA500;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <img src="images/logo-placeholder.png" alt="StackAttack Pack Logo">
     <h1>StackAttack Pack</h1>
