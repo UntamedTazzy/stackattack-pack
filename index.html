@@ -13,12 +13,11 @@ body {
     color: #FFFFFF;
     scroll-behavior: smooth;
 
-    /* Corrected combined gradient + subtle pattern */
+    /* Background image + gradient + subtle pattern overlay */
     background: 
-        radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px),
-        linear-gradient(135deg, #1A1A1A, #2C2C2C);
-    background-size: 50px 50px, auto;
-    background-repeat: repeat, no-repeat;
+        radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px), /* top pattern */
+        linear-gradient(135deg, #1A1A1A, #2C2C2C),                         /* middle gradient */
+        url('images/background.jpg') center/cover no-repeat;               /* bottom image */
 }
 
 /* --- Header --- */
@@ -139,7 +138,7 @@ ul li::before {
 <body>
 
 <header>
-    <img src="logo-placeholder.png" alt="StackAttack Pack Logo" class="logo">
+    <img src="images/logo-placeholder.png" alt="StackAttack Pack Logo" class="logo">
     <h1>StackAttack Pack</h1>
     <p>Play Longer. Think Stronger.</p>
     <a href="https://cash.app/$untamedtazzy" class="cta-button">Donate / Support</a>
@@ -179,7 +178,7 @@ ul li::before {
     <h2>Get in Touch</h2>
     <p>Email: <a href="mailto:wolftaztv@gmail.com">wolftaztv@gmail.com</a></p>
     <p>Donations: CashApp <a href="https://cash.app/$untamedtazzy">$untamedtazzy</a></p>
-    <img src="qr-placeholder.png" alt="QR Code" class="qr-code">
+    <img src="images/qr-placeholder.png" alt="QR Code" class="qr-code">
 </section>
 
 <div class="footer">
