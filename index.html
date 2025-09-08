@@ -1,203 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StackAttack Pack</title>
-<style>
-/* --- Global Styles --- */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #FFFFFF;
-    scroll-behavior: smooth;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackAttack Pack</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #123D12; /* Dark green background */
+      color: white;
+      line-height: 1.6;
+    }
 
-    /* Background image + gradient + subtle pattern overlay */
-    background: 
-        radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px), /* top pattern */
-        linear-gradient(135deg, #1A1A1A, #2C2C2C),                         /* middle gradient */
-        url('images/background.jpg') center/cover no-repeat;               /* bottom image */
-}
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-/* --- Header --- */
-header {
-    text-align: center;
-    padding: 50px 20px;
-    position: relative;
-}
-header img.logo {
-    width: 150px;
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: logoSlide 1s ease-out forwards;
-}
-header h1 {
-    color: #FF4B00;
-    font-size: 2.8rem;
-    margin: 20px 0 10px;
-    opacity: 0;
-    animation: fadeInText 2s forwards 0.5s;
-}
-header p {
-    font-size: 1.4rem;
-    color: #FFFFFF;
-    margin: 10px 0 20px;
-    opacity: 0;
-    animation: fadeInText 2s forwards 1s;
-}
-.cta-button {
-    background-color: #FF4B00;
-    color: #FFF;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-.cta-button:hover {
-    box-shadow: 0 0 20px #FF4B00;
-    transform: scale(1.05);
-}
+    header img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
 
-/* --- Animations --- */
-@keyframes logoSlide { to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInText { to { opacity: 1; } }
-@keyframes fadeInSection { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
 
-/* --- Sections --- */
-section {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 0 20px;
-    opacity: 0;
-    animation: fadeInSection 1s forwards;
-}
-section:nth-of-type(1) { animation-delay: 1.5s; }
-section:nth-of-type(2) { animation-delay: 2s; }
-section:nth-of-type(3) { animation-delay: 2.5s; }
-section:nth-of-type(4) { animation-delay: 3s; }
+    h2 {
+      color: #FFA500; /* Orange for headers */
+      margin-top: 30px;
+    }
 
-h2 {
-    color: #FF4B00;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-}
-h2::after {
-    content: "♠ ♥ ♦ ♣";
-    display: block;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #FF4B00;
-}
+    section {
+      padding: 20px 40px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-/* --- Lists --- */
-ul {
-    list-style: none;
-    padding: 0;
-}
-ul li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-ul li::before {
-    content: "•";
-    color: #FF4B00;
-    position: absolute;
-    left: 0;
-}
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
 
-/* --- Footer --- */
-.footer {
-    background-color: #111;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 0.9rem;
-}
-.footer a { color: #FF4B00; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #FFA500;
+      margin-top: 20px;
+    }
 
-/* --- QR Code --- */
-.qr-code {
-    display: block;
-    margin: 20px auto;
-    width: 150px;
-    height: 150px;
-    border: 3px solid #FF4B00;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.qr-code:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #FF4B00;
-}
-</style>
+    a {
+      color: #FFA500;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="images/logo-placeholder.png" alt="StackAttack Pack Logo" class="logo">
+  <header>
+    <img src="images/logo-placeholder.png" alt="StackAttack Pack Logo">
     <h1>StackAttack Pack</h1>
-    <p>Play Longer. Think Stronger.</p>
-    <a href="https://cash.app/$untamedtazzy" class="cta-button">Donate / Support</a>
-</header>
+    <p><strong>Play Longer. Think Stronger.</strong></p>
+  </header>
 
-<section>
-    <h2>What’s Inside Your Pack</h2>
+  <section id="about">
+    <h2>About the Founder</h2>
+    <p>Hi, I’m Taz — the solo creator behind <strong>StackAttack Pack</strong>. I built this from the ground up to give gamers, poker players, and focused minds a simple, no-nonsense snack that fuels both body and brain.</p>
+    <p>Every pack is hand-assembled by me — no big team, no outsourcing, just dedication and a mission to create smarter fuel for sharper moments.</p>
+  </section>
+
+  <section id="ingredients">
+    <h2>What's Inside?</h2>
     <ul>
-        <li>Peanuts (or sunflower seeds)</li>
-        <li>Beef Jerky</li>
-        <li>Dried Fruit</li>
-        <li>Premium Chocolate (Dove, Ghirardelli, Lindt)</li>
+      <li>High-quality beef jerky</li>
+      <li>Roasted peanuts (or nut-free alternative upon request)</li>
+      <li>Dried fruit mix</li>
+      <li>Individually wrapped dark chocolate</li>
     </ul>
-</section>
+  </section>
 
-<section>
-    <h2>Nutrition (Per Pack)</h2>
-    <ul>
-        <li>Protein: ~14–15.5 g</li>
-        <li>Carbs: ~22 g</li>
-        <li>Fat: ~19 g</li>
-        <li>Calories: ~316 kcal</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Where We’re Going</h2>
-    <ul>
-        <li>Expand pack tiers and variety</li>
-        <li>Introduce electrolyte/focus supplements</li>
-        <li>Launch subscription options</li>
-        <li>Partner with local card rooms, gaming cafes, and events</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Get in Touch</h2>
+  <section id="contact">
+    <h2>Contact & Support</h2>
     <p>Email: <a href="mailto:wolftaztv@gmail.com">wolftaztv@gmail.com</a></p>
-    <p>Donations: CashApp <a href="https://cash.app/$untamedtazzy">$untamedtazzy</a></p>
-    <img src="images/qr-placeholder.png" alt="QR Code" class="qr-code">
-</section>
+    <p>Support the mission: <strong>CashApp: $untamedtazzy</strong></p>
+  </section>
 
-<div class="footer">
-    <p>Allergen info included. First launch batch small-scale test. Consume responsibly.</p>
-</div>
-
-<script>
-// Scroll fade-in for sections
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-},{ threshold: 0.1 });
-sections.forEach(section => observer.observe(section));
-</script>
+  <footer>
+    <p>&copy; 2025 StackAttack Pack. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
