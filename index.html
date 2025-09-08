@@ -8,13 +8,16 @@
 /* --- Global Styles --- */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1A1A1A;
-    color: #FFFFFF;
     margin: 0;
     padding: 0;
+    color: #FFFFFF;
     scroll-behavior: smooth;
+    
+    /* Gradient + subtle pattern background */
+    background: linear-gradient(135deg, #1A1A1A, #2C2C2C);
+    background-image: radial-gradient(circle, rgba(255,75,0,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
-a { text-decoration: none; }
 
 /* --- Header --- */
 header {
@@ -157,7 +160,6 @@ ul li::before {
         <li>Carbs: ~22 g</li>
         <li>Fat: ~19 g</li>
         <li>Calories: ~316 kcal</li>
-        <li>Focus Ingredient: Ginkgo Biloba</li>
     </ul>
 </section>
 
@@ -183,7 +185,7 @@ ul li::before {
 </div>
 
 <script>
-// Optional: scroll fade-in for sections
+// Scroll fade-in for sections
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -193,7 +195,6 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 },{ threshold: 0.1 });
-
 sections.forEach(section => observer.observe(section));
 </script>
 
