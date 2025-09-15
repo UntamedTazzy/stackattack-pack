@@ -1,156 +1,109 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StackAttack Pack</title>
   <style>
-    /* Base styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #123D12; /* Dark green base */
-      background-image: url('images/poker-pattern.png'); /* subtle pattern overlay */
-      background-size: cover;
-      background-repeat: repeat;
+      background-color: #123D12; /* Dark green background */
       color: white;
       line-height: 1.6;
-      scroll-behavior: smooth;
+      text-align: center;
     }
     header {
-      text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
     }
     header img {
-      max-width: 200px;
-      margin-bottom: 20px;
+      max-width: 250px; /* Adjust logo size */
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
     }
     h1 {
       font-size: 2.5em;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
     h2 {
-      color: #FFA500; /* Orange headers */
+      color: #FFA500; /* Orange for section titles */
       margin-top: 30px;
-      transition: all 0.3s ease;
-    }
-    h2:hover {
-      text-shadow: 0 0 8px #FFA500;
     }
     section {
-      padding: 20px 40px;
+      padding: 20px;
       max-width: 900px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
     }
-    section:nth-of-type(1) { animation-delay: 0.2s; }
-    section:nth-of-type(2) { animation-delay: 0.4s; }
-    section:nth-of-type(3) { animation-delay: 0.6s; }
-    section:nth-of-type(4) { animation-delay: 0.8s; }
-    section:nth-of-type(5) { animation-delay: 1s; }
-    section:nth-of-type(6) { animation-delay: 1.2s; }
     ul {
       list-style-type: square;
-      padding-left: 20px;
+      text-align: left;
+      display: inline-block;
     }
     a {
       color: #FFA500;
       text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      text-shadow: 0 0 8px #FFA500;
-      color: #FFA500;
     }
     footer {
       text-align: center;
       padding: 20px;
       border-top: 1px solid #FFA500;
-      margin-top: 20px;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header Section with Logo -->
   <header>
-    <img src="images/logo-placeholder.png" alt="StackAttack Pack Logo">
+    <img src="images/logo.png" alt="StackAttack Pack Logo">
     <h1>StackAttack Pack</h1>
     <p><strong>Play Longer. Think Stronger.</strong></p>
   </header>
 
-  <!-- About the Founder -->
-  <section id="about">
+  <!-- About Section -->
+  <section>
     <h2>About the Founder</h2>
-    <p>Hi, I’m Taz — the solo creator behind <strong>StackAttack Pack</strong>. I built this from the ground up to give gamers, poker players, and focused minds a simple, no-nonsense snack that fuels both body and brain.</p>
-    <p>Every pack is hand-assembled by me — no big team, no outsourcing, just dedication and a mission to create smarter fuel for sharper moments.</p>
+    <p>Hi, I’m Taz — the solo creator behind <strong>StackAttack Pack</strong>. 
+       I built this from the ground up to give gamers, poker players, and 
+       focused minds a simple, no-nonsense snack that fuels both body and brain.</p>
+    <p>Every pack is hand-assembled by me — no big team, no outsourcing, just dedication 
+       and a mission to create smarter fuel for sharper moments.</p>
   </section>
 
-  <!-- Ingredients -->
-  <section id="ingredients">
+  <!-- Ingredients Section -->
+  <section>
     <h2>What's Inside?</h2>
     <ul>
       <li>Premium beef jerky</li>
-      <li>Roasted peanuts and sunflower seeds</li>
-      <li>Dried fruit mix-blueberries and cranberries </li>
-      <li>Individually wrapped premium dark chocolate</li>
+      <li>Almonds, peanuts, walnuts</li>
+      <li>Sunflower and pumpkin seeds</li>
+      <li>Dried cranberries, blueberries, and raisins</li>
+      <li>Individually wrapped premium chocolate</li>
     </ul>
-    <p><strong>Allergen Info:</strong> Contains peanuts, soy, and dairy. Nut-free alternative available upon request.</p>
+    <p><strong>Nut-Free Alternative Available Upon Request.</strong></p>
   </section>
 
-  <!-- Nutrition -->
-  <section id="nutrition">
-    <h2>Nutrition (Per Pack)</h2>
+  <!-- Nutrition Section -->
+  <section>
+    <h2>Nutrition Info</h2>
     <ul>
-      <li>Protein: ~14–15.5 g</li>
-      <li>Carbs: ~22 g</li>
-      <li>Fat: ~19 g</li>
+      <li>Protein: ~14-15.5g</li>
+      <li>Carbs: ~22g</li>
+      <li>Fat: ~19g</li>
       <li>Calories: ~316 kcal</li>
     </ul>
-    <p>Serving suggestion: 1 pack 5 oz- Perfect for a 4-hour gaming or poker session — keeps you fueled and focused.</p>
   </section>
 
-  <!-- Future Goals -->
-  <section id="future">
-    <h2>Our Goals for the Future</h2>
-    <ul>
-      <li>Expand pack tiers and variety</li>
-      <li>Introduce electrolyte/focus supplements for water</li>
-      <li>Launch subscription options, weekly or monthly</li>
-      <li>Carter to feedback from the customers and adapt it to future changes.</li>
-    </ul>
-    <p>First small-batch launch — only 16 packs available. Get yours while supplies last!</p>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq">
-    <h2>FAQ</h2>
-    <ul>
-      <li><strong>Can I substitute ingredients?</strong> Yes, nut-free alternative available upon request.</li>
-      <li><strong>How long do the packs last?</strong> Best consumed within 3 months; store in a cool, dry place.</li>
-      <li><strong>Can this be shipped?</strong> Currently local pickup only, but shipping is planned in future batches.</li>
-      <li><strong>Can I give feedback?</strong> Absolutely! Email me with email below.</li>
-    </ul>
-  </section>
-
-  <!-- Contact & Donations -->
-  <section id="contact">
+  <!-- Contact Section -->
+  <section>
     <h2>Contact & Support</h2>
     <p>Email: <a href="mailto:wolftaztv@gmail.com">wolftaztv@gmail.com</a></p>
     <p>Support the mission: <strong>CashApp: $untamedtazzy</strong></p>
-    <p>I’d love to hear your thoughts and suggestions for improving future packs!</p>
+    <img src="images/qr-placeholder.png" alt="QR Code" style="width:150px; height:150px; margin-top:10px; border:3px solid #FFA500;">
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 StackAttack Pack. All rights reserved.</p>
   </footer>
